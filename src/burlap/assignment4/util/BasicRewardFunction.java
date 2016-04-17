@@ -25,8 +25,23 @@ public class BasicRewardFunction implements RewardFunction {
 		int ay = agent.getIntValForAttribute(BasicGridWorld.ATTY);
 
 		// are they at goal location?
+
+		if (ax == this.goalX-1 && ay == this.goalY) { //todo uncomment if I want negative rewards
+			return -25;
+		}
+
+		if (ax == this.goalX-8 && ay == this.goalY-8) {
+			return -25;
+		}
+
+		if (ax == this.goalX-1 && ay == this.goalY-8) {
+			return -25;
+		}
+
+
+
 		if (ax == this.goalX && ay == this.goalY) {
-			return 100.;
+			return 100;
 		}
 
 		return -1;

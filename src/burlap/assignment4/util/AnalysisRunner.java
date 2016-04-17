@@ -92,8 +92,8 @@ public class AnalysisRunner {
 					tf,
 					0.99,
 					hashingFactory,
-					-1, 1, numIterations);
-	
+					-1, 2, numIterations); // todo changed from 1 to 2
+
 			// run planning from our initial state
 			p = pi.planFromState(initialState);
 			AnalysisAggregator.addMillisecondsToFinishPolicyIteration((int) (System.nanoTime()-startTime)/1000000);

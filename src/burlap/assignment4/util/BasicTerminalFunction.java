@@ -24,11 +24,8 @@ public class BasicTerminalFunction implements TerminalFunction {
 		int ay = agent.getIntValForAttribute(BasicGridWorld.ATTY);
 
 		// are they at goal location?
-		if (ax == this.goalX && ay == this.goalY) {
-			return true;
-		}
+		return ax == this.goalX && ay == this.goalY; //|| ax == this.goalX && ay == this.goalY - 1; // todo remove the second part if I don't want a neg terminal function (check FAQ)
 
-		return false;
 	}
 
 }
